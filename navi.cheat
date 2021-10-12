@@ -1,8 +1,7 @@
-% update navi repo
+% navi, repo
 
-# update repo
-git clone "https://github.com/<user>/<repo>" "$(navi info cheats-path)/<user>__<repo>" &>/dev/null \
-|| (cd "$(navi info cheats-path)/<user>__<repo>" && git pull)
+# pull repo
+(cd "$(navi info cheats-path)/<user>__<repo>" && git pull)
 
 $ cheats_path: navi info cheats-path
 $ user: ls <cheats_path> | awk -F'__' '{ print $1 }'
