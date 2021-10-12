@@ -1,0 +1,6 @@
+% hello world, foo, bar
+
+# print something
+echo "Hello World and <name>!"
+
+$ name: whoami
