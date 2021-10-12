@@ -1,6 +1,9 @@
-% hello world, foo, bar
+% hello world
 
-# print something
-echo "Hello World and <name>!"
+# say hi
+echo "Hello World and <name>\!"
+
+# say bye
+echo "Bye World and <name>\!"
 
 $ name: whoami
