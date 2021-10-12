@@ -1,9 +1,0 @@
-% hello world
-
-# say hi
-echo "Hello World and <name>\!"
-
-# say bye
-echo "Bye World and <name>\!"
-
-$ name: whoami
