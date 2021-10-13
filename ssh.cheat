@@ -1,0 +1,6 @@
+% ssh
+
+# connect
+ssh <host>
+
+$ host: awk -F'[ :]' '!seen[$1] { gsub(/[\[\]]/,"", $1); print $1 } { seen[$1]++ }' ~/.ssh/known_hosts
