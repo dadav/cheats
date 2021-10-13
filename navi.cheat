@@ -1,4 +1,4 @@
-% navi, repo
+% navi
 
 # pull repo
 (cd "$(navi info cheats-path)/<user>__<repo>" && git pull)
