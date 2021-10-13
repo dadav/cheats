@@ -1,0 +1,7 @@
+% ansible
+
+# open ansible documentation
+ansible-doc -t <plugin_type> <plugin>
+
+$ plugin_type: echo -e "become\ncache\ncallback\ncliconf\nconnection\nhttpapi\ninventory\nlookup\nnetconf\nshell\nvars\nmodule\nstrategy\nrole\nkeyword"
+$ plugin: ansible-doc -t <plugin_type> -l -j | jq -r 'keys[] as $k | [($k), (.[$k])]|@tsv' --- --column 1 --delimiter '\t'
