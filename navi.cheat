@@ -5,4 +5,4 @@
 
 $ cheats_path: navi info cheats-path
 $ user: ls <cheats_path> | awk -F'__' '{ print $1 }'
-$ repo: find <cheats_path> -maxdepth 1 -name "<user>*"  | awk -F'__' '{ print $2 }'
+$ repo: fd --type d --follow --max-depth 1 "<user>*" <cheats_path>  | awk -F'__' '{ print $2 }'
