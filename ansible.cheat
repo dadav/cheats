@@ -3,5 +3,5 @@
 # open ansible documentation
 ansible-doc -t <plugin_type> <plugin>
 
-$ plugin_type: echo -e "become\ncache\ncallback\ncliconf\nconnection\nhttpapi\ninventory\nlookup\nnetconf\nshell\nvars\nmodule\nstrategy\nrole\nkeyword"
+$ plugin_type: echo -e "become\ncache\ncallback\ncliconf\nconnection\nhttpapi\ninventory\nlookup\nnetconf\nshell\nvars\nmodule\nstrategy\nrole\nkeyword" --- --fzf-overrides '--query module --no-select-1'
 $ plugin: bkt --cache_dir $HOME/.cache/bkt --ttl=30d -- ansible-doc -t <plugin_type> -l -j | jq -r 'keys[] as $k | [($k), (.[$k])]|@tsv' --- --column 1 --delimiter '\t'
