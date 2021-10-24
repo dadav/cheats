@@ -1,0 +1,6 @@
+% kubectl
+
+# change default namespace
+kubectl config set-context $(kubectl config current-context) --namespace <namespace>
+
+$ namespace: kubectl get ns -o go-template --template '{{ range .items }} {{ printf "%s\n" .metadata.name }} {{ end }}'
