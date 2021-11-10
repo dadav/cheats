@@ -1,0 +1,10 @@
+% openssl
+
+# generate a private key
+openssl genrsa -out <OUTPUT_KEY> <RSA_LENGTH>
+
+# generate a csr
+openssl req -new -key <INPUT_KEY> -subj "/CN=<SUBJECT>" -out <OUTPUT_CSR>
+
+$ RSA_LENGTH: printf "KEY LENGTH\tCOMMENT\n2048\t\tDefault\n4096\t\tBetter\n8192\t\tSlow?" --- --column 1 --headers 1
+$ INPUT_KEY: ls -a | grep -e "\(.key\|.pem\)" || ls -a
